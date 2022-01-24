@@ -1,0 +1,58 @@
+{
+  "name": "react-test-task",
+  "version": "0.1.0",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "build": "parcel build",
+    "start": "parcel",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intl": "^5.24.3",
+    "react-query": "^3.34.12",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.21",
+    "jest": "^27.4.7",
+    "parcel": "^2.2.1",
+    "prettier": "^2.5.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ],
+      "@babel/preset-typescript"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 120,
+    "singleQuote": true
+  }
+}
