@@ -1,12 +1,12 @@
 import { FormattedMessage } from 'react-intl';
 
-export const Counter = ({ onUp, onDown, first, last }) => {
+export const Counter = ({ onUp, onDown }) => {
   return (
     <>
-      <button disabled={first} onClick={onDown}>
+      <button disabled={!Boolean(onDown)} onClick={onDown}>
         <FormattedMessage id="previous" />
       </button>
-      <button disabled={last} onClick={onUp}>
+      <button disabled={!Boolean(onUp)} onClick={onUp}>
         <FormattedMessage id="next" />
       </button>
     </>

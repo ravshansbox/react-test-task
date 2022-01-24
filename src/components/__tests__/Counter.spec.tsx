@@ -8,7 +8,7 @@ test('render <Counter/>', () => {
   const onDown = jest.fn();
   render(
     <IntlProvider locale="en" messages={messages.en}>
-      <Counter onUp={onUp} onDown={onDown} first={false} last={false} />
+      <Counter onUp={onUp} onDown={onDown} />
     </IntlProvider>
   );
 });

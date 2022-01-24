@@ -27,10 +27,8 @@ export const App = () => {
     <IntlProvider locale={locale} defaultLocale="en" messages={messages[locale]}>
       <QueryClientProvider client={queryClient}>
         <Counter
-          onUp={() => setIndex(index + 1)}
-          onDown={() => setIndex(index - 1)}
-          first={index === 0}
-          last={index === repos.length - 1}
+          onDown={index > 0 ? () => setIndex(index - 1) : null}
+          onUp={index < repos.length - 1 ? () => setIndex(index + 1) : null}
         />
         <RepoList repos={repos} current={index} />
         <RepoInfo name={repos[index]} />
